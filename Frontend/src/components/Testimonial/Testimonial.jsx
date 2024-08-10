@@ -1,62 +1,136 @@
-/*
 import React from 'react'
-import { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import patientAvatar from '../../assets/images/patient-avatar.png'
+import styled from 'styled-components'
 
+
+let clients = [
+    {
+        name : "John Michel",
+        position : "web developer",
+        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        stars : 3,
+        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+    },
+    {
+        name : "John Michel",
+        position : "web developer",
+        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        stars : 4,
+        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+    },
+    {
+        name : "John Michel",
+        position : "web developer",
+        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        stars : 5,
+        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+    },
+    {
+        name : "John Michel",
+        position : "web developer",
+        img_url : "https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+        stars : 5,
+        disc : `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Temporibus consequuntur dolores labore natus similique nemo doloribus cum accusantium adipisci maiores.`
+    },
+]
+var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    arrows : false,
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]}
 
 const Testimonial = () => {
-    return (
-        <div className='mt-[30px] lg:mt-[55px]'>
-            <Swiper
-            modules={[Pagination]} 
-            spaceBetween={30} 
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            breakpoints={{
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                }}
-            >
-
-            <SwiperSlide>
-                    <div className='py-[30px] px-5 rounded-3'>
-                        <div className='flex items-center gap-[13px]'>
-                            <img src={patientAvatar} alt="" />
-                            <div>
-                                <h4 className='text-[18px] leading-[30px] font-semibold text-headingColor'>Sadid Rafan</h4>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
-    )
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
 export default Testimonial
-*/
 
-import React from 'react';
 
-const Testimonial = () => {
-    return (
-        <div>dadfaass</div>
+const Container = styled.div`
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 0;
 
-    )
-};
+    @media(max-width:840px){
+        width: 90%;
+    }
 
-export default Testimonial;
+    span{
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
+    h1{
+        padding-top: 1rem;
+        text-transform: capitalize;
+    }
+
+    .slick-list, .slick-slider, .slick-track{
+        padding: 0;
+    }
+
+    .slick-dots{
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+    .slick-dots li button:before{
+        content: "";
+    }
+
+    .slick-dots li button{
+        width: 9px;
+        height: 4px;
+        background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+        padding: 0.1rem;
+        margin-top: 1rem;
+        transition: all 400ms ease-in-out;
+        border-radius: 50px;
+    }
+    
+    .slick-dots li.slick-active button{
+        background: #01be96;
+        width: 15px;
+    }
+
+    .slick-dots li{
+        margin: 0;
+    }
+`

@@ -21,7 +21,7 @@ const DoctorDetails = () => {
                         </figure>
 
                         <div>
-                            <span className='bg-[#CCF0F3] text-irisBlueColor py-1 px-6 lg:py-2 lg:px-6
+                            <span className='bg-[#418B24] text-white py-1 px-6 lg:py-2 lg:px-6
                             text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded'>
                                 Surgeon
                             </span>
@@ -39,7 +39,7 @@ const DoctorDetails = () => {
                                 </span>
                             </div>
                             <p className='text__para text-[14px] leading-6 md:text-[15px] 
-                            lg:max-w-[390px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, qui?</p>
+                            lg:max-w-[390px]'>Leading cardiologist known for his expertise in treating heart diseases with a patient-centered approach.</p>
                         </div>
 
                     </div>
